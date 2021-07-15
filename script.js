@@ -164,18 +164,18 @@
 // console.log(name);                // execute this last as global context is the last one remaining after innner() outer()
 //final o/p- inner outer global
 //CALL STACK OF ABOVE
-/*  |INNER(), ref to   |   
-    | self& here global|                   
-    |for this is the   |              
-    |inner() func      |            
+/*  |INNER(), ref to   |
+    | self& here global|
+    |for this is the   |
+    |inner() func      |
     |                  |
     |                  |
     |------------------|
     |     OUTER() ref  |
-    |  to selfvar and  | 
-    |   global as well |               
-    |------------------| 
-    | GLOBAL CONTEXT   | 
+    |  to selfvar and  |
+    |   global as well |
+    |------------------|
+    | GLOBAL CONTEXT   |
     |__________________|
 
 
@@ -214,19 +214,25 @@
 // }
 // arr.forEach(print); //Iterate over arrays using forEach() by passing a function
 
+
+
+// ************************************OBJECTS*******************************************
 // var obj = {
 //     name: "Vivek",
 //     age: 20,
 //     rollNo: 175,
+//     "2":"two"
 // };
 // var obj2 = new Object();
 // // console.log(obj.name);
 // obj.marks=90; 
 // console.log(obj["name"]);
+// console.log(obj);
+// // console.log(delete obj.marks); //delete object prop
+// console.log(obj);
 
-
-
-// function errorHandling(flag){
+//-----------------------------------------------------------------------
+// function errorHandling(flag){                                         
 //     try{
 //         let a = 10;
 //         if(flag && isNaN("sdfkhb")){
@@ -242,9 +248,52 @@
 //         console.log("Clear memory");
 //     }
 // }
+//---------------------------------------------------------------------------
 
 
-// (() => {console.log(5)})()
 
-const [a, b, c, d] = ["Hi", 5, [1, 2, 3, 4, 5], {name: "Name"}]
-console.log(c);
+// for (var prop in obj){              //Itertaing over obects using for... in
+//     console.log(prop,":", obj[prop]);
+// }
+
+// var keys = Object.keys(obj);   // using keys() function to iterate over objects
+// var keys1 = Object.getOwnPropertyNames(obj);   
+
+
+// var obj3 = {                //NESTED OBJECTS
+//     "Name": "Somebody",
+//     "Age": 60,
+//     Address: {
+//         city: "lol island",
+//         street: "sesame street",
+//         pincode: "42069"
+
+//     }
+// };
+// console.log(obj3);
+
+arr4 = [10, 20, 30, 40]
+
+// console.log(arr4)
+// console.log(typeof (arr4)) // Arrays in JS are considered as objects
+// console.log(arr4.length)
+//O/P 
+
+// arr4[6] = "Bob"
+
+// console.log(arr4)
+// console.log(arr4.length) //indexes 4&5 are marked as empty and the length returned is 7  O/P-->> (7) [10, 20, 30, 40, empty × 2, "Bob"]
+
+// for (var i in arr4) { //ITERATING over arrays using 'for in' 
+
+//     console.log(i)
+// }
+
+// ------------------------------------
+
+function hello() {
+    console.log("Hello World!")
+}
+
+setTimeout(hello, 5000) //executes the code/function once after the timeout.
+setInterval(hello, 1000) //executes the code/function repeatedly, with the length of the timeout between each repeat.
