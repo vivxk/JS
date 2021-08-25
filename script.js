@@ -282,7 +282,7 @@ arr4 = [10, 20, 30, 40]
 // arr4[6] = "Bob"
 
 // console.log(arr4)
-// console.log(arr4.length) //indexes 4&5 are marked as empty and the length returned is 7  O/P-->> (7) [10, 20, 30, 40, empty × 2, "Bob"]
+// console.log(arr4.length) //indexes 4&5 are marked as empty and the length returned is 7  O/P-->> (7) [10, 20, 30, 40, empty × 2, "Bob"]
 
 // for (var i in arr4) { //ITERATING over arrays using 'for in' 
 
@@ -291,9 +291,40 @@ arr4 = [10, 20, 30, 40]
 
 // ------------------------------------
 
-function hello() {
-    console.log("Hello World!")
-}
+// function hello() {
+//     console.log("Hello World!")
+// }
 
-setTimeout(hello, 5000) //executes the code/function once after the timeout.
-setInterval(hello, 1000) //executes the code/function repeatedly, with the length of the timeout between each repeat.
+// setTimeout(hello, 5000) //executes the code/function once after the timeout.
+// setInterval(hello, 1000) //executes the code/function repeatedly, with the length of the timeout between each repeat.
+
+//***********Simple Countdown timer using timing events *******************
+
+// var count = 20;
+
+// function countDown() {
+//     if (count == 0) {
+//         console.log("Time's Up!")
+//         clearInterval(id); //to clear the interval and prevent it to go to negative
+//         return;
+//     }
+//     console.log(count);
+//     count--;
+// }
+// setTimeout(countDown, 1000);
+// var id = setInterval(countDown, 1000);
+
+// ***************************************************************
+
+//Javascript DOM
+
+document.documentElement // returns the documentElement of the document, as an Element object.
+window //rep an open window in browser
+document.getElementById("one")
+var dom = document.getElementById("one")
+dom.style.color = 'red'
+dom.style.backgroundColor = 'black'
+document.getElementsByTagName("h1")
+document.getElementsByClassName("para")
+var dom_query = document.querySelector("#one")
+dom_query.style.backgroundColor = "orange"
